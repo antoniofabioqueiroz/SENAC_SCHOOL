@@ -38,7 +38,7 @@ def ErroNota(nota: str, n: int)->float:
 		if erro:
 			print("\nNota inserida inválida, informe outra")
 			nota = input("Nota {}: ".format(n))
-    return float("{:.2f}".format(float(nota)))
+	return float("{:.2f}".format(float(nota)))
 
 
 def ErroGeral(analise: str, opcoes: list, dominio: list)->str: #OK.
