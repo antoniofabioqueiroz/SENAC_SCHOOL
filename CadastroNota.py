@@ -21,7 +21,7 @@ def somanota(aluno, vet, op):
         else:
             if continua == "s" and indice < 15:
                 indice += 1
-            else
+            else:
                 continua = "n"
                 print("Cadastro finalizado.")
     l = input("Para sair pressione 'Enter'")
