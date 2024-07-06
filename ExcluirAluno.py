@@ -20,12 +20,11 @@ def excluirAluno(aluno, vet, op)->list[list[str],list[float]]:
     if i == "s":
         aluno[indice] = ["", "", ""]
         vet[indice] = [0, 0, 0, 0, 0]
-        for x in aluno[indice:15]:
-            if x[0] != "" and aluno.index(x) < 14:
-                i = aluno.index(x)
-                inter = aluno[i]
-                aluno[i] = aluno[i+1]
-                aluno[i+1] = inter
+        for x in range(indice, 15):
+            if x < 14:
+                inter1, inter2 = aluno[x], vet[x]
+                aluno[x], vet[x] = aluno[x+1], vet[x+1]
+                aluno[x+1], vet[x+1] = inter1, inter2
         print("Aluno excluído com sucesso.")
     else:
         print("Exclusão cancelada.")
