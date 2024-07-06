@@ -6,7 +6,7 @@ from Notas import notas
 def somanota(aluno, vet, op):
     indice, continua = 0, "s"
     while indice < 15 and continua == "s":
-        if aluno[indice][0] != "":
+        if vet[indice][0] is None and aluno[indice][0] != "":
             LimpaTela()
             print("Cadastro de notas de {}".format(aluno[indice][0]))
             for x in range(0, 4):
@@ -19,7 +19,10 @@ def somanota(aluno, vet, op):
             else:
                 indice = 15
         else:
-            continua = "n"
-            print("Cadastro finalizado.\nPressione 'Enter' para sair")
-            l = input()
+            if continua == "s" and indice < 15:
+                indice += 1
+            else
+                continua = "n"
+                print("Cadastro finalizado.")
+    l = input("Para sair pressione 'Enter'")
     return vet
