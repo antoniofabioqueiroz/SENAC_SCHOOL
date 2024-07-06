@@ -19,7 +19,7 @@ def ErroNota(nota: str, n: int)->float:
 		for x in nota:
 			if x in "0123456789.":
 				inter += 1
-		if inter == len(notas):
+		if inter == len(nota):
 			letra = False
 		else:
 			letra = True
