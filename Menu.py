@@ -1,6 +1,6 @@
 from AdicionarAlunos import *
 from ListarAlunos import *
-#from somanota import *
+from CadastroNota import *
 from ListarNotas import *
 from EditarAlunos import *
 from ExcluirAluno import *
@@ -35,8 +35,7 @@ def menu(op, vet, aluno): #OK.
         case "2":
             listar_aluno(aluno,vet, op)
         case "3":
-            pass
-           #vet = somanota(aluno, vet, op)
+           vet = somanota(aluno, vet, op)
         case "4":
             RelNota(aluno, vet, op)
         case "5":
