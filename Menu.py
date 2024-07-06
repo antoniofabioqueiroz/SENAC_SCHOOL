@@ -1,9 +1,9 @@
-from AdicionarAlunos import *
-from ListarAlunos import *
-from CadastroNota import *
-from ListarNotas import *
-from EditarAlunos import *
-from ExcluirAluno import *
+from AdicionarAlunos import add_alunos
+from ListarAlunos import listar_aluno
+from CadastroNota import somanota
+from ListarNotas import RelNota
+from EditarAlunos import editaon_noute
+from ExcluirAluno import excluirAluno
 from Erros import ErroGeral
 from Limpa import LimpaTela
 
