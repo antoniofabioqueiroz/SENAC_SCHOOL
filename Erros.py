@@ -13,7 +13,7 @@ def ErroIdade(idade: str)->str: #OK.
 
 
 def ErroNota(nota: str, n: int)->float:
-    erro = True
+	erro = True
 	while erro:
 		inter = 0
 		for x in nota:
