@@ -13,22 +13,32 @@ def ErroIdade(idade: str)->str: #OK.
 
 
 def ErroNota(nota: str, n: int)->float:
-    numero, erro = "0123456789.", True
-    while erro == True:
-        if  nota.find(".") == nota.rfind("."):
-            if not (float(nota) < 0 or float(nota) > 10):
-                erro = False
-            else: 
-                erro = True
-            for x in range(0, len(nota)):
-                if not (nota[x] in numero):
-                    erro = True
-        else:
-            erro = True
-        if erro == True:
-            print("\nNota inserida inválida, informe outra.")
-            nota = input("Nota {}: ".format(n))
-    return float("{:.2f}".format(float(nota)))
+	erro = True
+	while erro:
+		inter = 0
+		for x in nota:
+			if x in "0123456789.":
+				inter += 1
+		if inter == len(nota):
+			letra = False
+		else:
+			letra = True
+		if nota.find(".") == nota.rfind("."):
+			ponto = False
+		else:
+			ponto = True
+		if ponto is False and letra is False and nota != ".":
+			if not(float(nota) > 10 or float(nota) < 0):
+				intervalo = False
+			else:
+				intervalo = True
+		else:
+			intervalo = True
+		erro = intervalo or ponto or letra
+		if erro:
+			print("\nNota inserida inválida, informe outra")
+			nota = input("Nota {}: ".format(n))
+	return float("{:.2f}".format(float(nota)))
 
 
 def ErroGeral(analise: str, opcoes: list, dominio: list)->str: #OK.

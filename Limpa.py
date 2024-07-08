@@ -2,6 +2,6 @@ from os import system
 
 
 def LimpaTela()->None: 
-    system("clear")
+    system("cls")
     # Windows: "cls"
     # Linux: "clear"
