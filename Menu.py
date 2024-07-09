@@ -1,9 +1,9 @@
-from AdicionarAlunos import *
-from ListarAlunos import *
-#from somanota import *
-from ListarNotas import *
-from EditarAlunos import *
-from ExcluirAluno import *
+from AdicionarAlunos import add_alunos
+from ListarAlunos import listar_aluno
+from CadastroNota import somanota
+from ListarNotas import RelNota
+from EditarAlunos import editaon_noute
+from ExcluirAluno import excluirAluno
 from Erros import ErroGeral
 from Limpa import LimpaTela
 
@@ -35,8 +35,7 @@ def menu(op, vet, aluno): #OK.
         case "2":
             listar_aluno(aluno,vet, op)
         case "3":
-            pass
-           #vet = somanota(aluno, vet, op)
+           vet = somanota(aluno, vet, op)
         case "4":
             RelNota(aluno, vet, op)
         case "5":
